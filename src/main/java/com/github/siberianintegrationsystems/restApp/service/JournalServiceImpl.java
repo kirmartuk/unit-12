@@ -20,6 +20,7 @@ import java.util.stream.Collectors;
 public class JournalServiceImpl implements JournalService {
 
     public static final String QUESTIONS_JOURNAL_ID = "questions";
+    public static final String SESSIONS_JOURNAL_ID = "sessions";
 
     private final JournalRepository journalRepository;
     private final QuestionRepository questionRepository;
@@ -38,6 +39,8 @@ public class JournalServiceImpl implements JournalService {
         return journalRepository.findById(id)
                 .orElseThrow(RuntimeException::new);
     }
+
+
 
     @Override
     public List<? extends JournalItemDTO> getJournalRows(

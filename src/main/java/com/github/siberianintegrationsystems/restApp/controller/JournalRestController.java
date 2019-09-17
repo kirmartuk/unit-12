@@ -24,6 +24,8 @@ public class JournalRestController {
         return new JournalEntityDTO(journalService.getJournal(id));
     }
 
+
+
     @PutMapping("{id}/rows")
     public JournalResultDTO getRows(@PathVariable String id,
                                     @RequestBody JournalRequestDTO req) {

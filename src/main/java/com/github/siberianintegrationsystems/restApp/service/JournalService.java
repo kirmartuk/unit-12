@@ -9,5 +9,6 @@ import java.util.List;
 public interface JournalService {
     Journal getJournal(String id);
 
+
     List<? extends JournalItemDTO> getJournalRows(String id, JournalRequestDTO req);
 }
