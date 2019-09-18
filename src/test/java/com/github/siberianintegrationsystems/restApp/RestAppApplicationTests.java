@@ -24,11 +24,6 @@ public class RestAppApplicationTests {
 	}
 
 
-	@Test
-	public void contextLoads() {
-	}
-	@Test
-	public void getQuestions() {
-	}
+
 
 }

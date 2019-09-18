@@ -11,6 +11,7 @@ import org.hibernate.validator.constraints.Range;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -28,16 +29,14 @@ public class QuestionServiceImpl implements QuestionService {
 
     @Override
     public List<QuestionsItemDTO> getQuestions() {
-        Iterable<Question> questions;
-        List<QuestionsItemDTO> list = null;
-        questions =  questionRepository.findAll();
-        for (Question question: questions) {
-            List<Answer> answers = answerRepository.findByQuestion(question);
-            list.add(new QuestionsItemDTO(question,answers));
+       List<QuestionsItemDTO> questions = new ArrayList<>();
+       questionRepository.findAll()
+               .forEach(question -> questions.add(
+                       new QuestionsItemDTO(question,
+                               answerRepository.findByQuestion(question))));
 
-        }
 
-        return list;
+        return questions;
     }
 
     @Override

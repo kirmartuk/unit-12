@@ -1,13 +1,8 @@
 package com.github.siberianintegrationsystems.restApp.controller;
 
-import com.github.siberianintegrationsystems.restApp.controller.dto.JournalItemDTO;
-import com.github.siberianintegrationsystems.restApp.controller.dto.JournalRequestDTO;
-import com.github.siberianintegrationsystems.restApp.controller.dto.JournalResultDTO;
 import com.github.siberianintegrationsystems.restApp.controller.dto.QuestionsItemDTO;
 import com.github.siberianintegrationsystems.restApp.service.QuestionService;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "*")
