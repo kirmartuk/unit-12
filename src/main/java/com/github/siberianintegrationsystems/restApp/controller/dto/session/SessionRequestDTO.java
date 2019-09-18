@@ -8,6 +8,9 @@ public class SessionRequestDTO {
     private String name;
     private List<AnsweredQuestionDTO> questionsList;
 
+    public SessionRequestDTO() {
+    }
+
     public String getName() {
         return name;
     }

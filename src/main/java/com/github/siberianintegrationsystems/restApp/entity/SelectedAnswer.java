@@ -15,10 +15,12 @@ public class SelectedAnswer extends BaseEntity  {
     @ManyToOne(fetch = FetchType.LAZY)
     private Session session;
 
-    public SelectedAnswer(Answer answer, Session session) {
+    public SelectedAnswer(Session session, Answer answer) {
         this.answer = answer;
         this.session = session;
     }
+
+
 
     public Answer getAnswer() {
         return answer;

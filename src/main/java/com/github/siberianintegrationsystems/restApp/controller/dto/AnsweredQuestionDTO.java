@@ -8,6 +8,15 @@ public class AnsweredQuestionDTO {
     private String id;
     private List<SessionQuestionAnswer> answersList;
 
+
+    public AnsweredQuestionDTO(String id, List<SessionQuestionAnswer> answersList) {
+        this.id = id;
+        this.answersList = answersList;
+    }
+
+    public AnsweredQuestionDTO() {
+    }
+
     public String getId() {
         return id;
     }

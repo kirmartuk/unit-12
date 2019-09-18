@@ -7,10 +7,13 @@ import com.github.siberianintegrationsystems.restApp.service.JournalServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import javax.annotation.PostConstruct;
 
+
 @SpringBootApplication
+@EnableJpaRepositories(basePackages = "com.github.siberianintegrationsystems.restApp.data")
 public class RestAppApplication {
 
 	@Autowired

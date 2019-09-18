@@ -7,6 +7,30 @@ public class AnswerItemDTO {
     public String answerText;
     public Boolean isCorrect;
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getAnswerText() {
+        return answerText;
+    }
+
+    public void setAnswerText(String answerText) {
+        this.answerText = answerText;
+    }
+
+    public Boolean getCorrect() {
+        return isCorrect;
+    }
+
+    public void setCorrect(Boolean correct) {
+        isCorrect = correct;
+    }
+
     public AnswerItemDTO() {
 
     }
